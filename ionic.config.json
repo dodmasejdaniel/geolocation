@@ -1,0 +1,7 @@
+{
+  "name": "sample-geolocation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

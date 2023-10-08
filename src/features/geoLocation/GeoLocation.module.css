@@ -1,0 +1,13 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em;
+}
+
+.button {
+    border-radius: 2em;
+    padding: 0.9em;
+    color: white;
+    background-color: lightslategray;
+}
