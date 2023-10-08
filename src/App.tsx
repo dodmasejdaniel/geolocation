@@ -1,5 +1,3 @@
-// app.tsx
-
 import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
@@ -31,17 +29,14 @@ import BarcodeProvider from './provider/BarcodeProvider';
 setupIonicReact();
 
 const App: React.FC = () => {
-  // Corrected service worker registration code
+  // Service worker registration
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker
-        .register('/service-worker.js')
-        .then((registration) => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
+      navigator.serviceWorker.register('/sw.js').then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }).catch((error) => {
+        console.log('Service Worker registration failed:', error);
+      });
     });
   }
 
